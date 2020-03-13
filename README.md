@@ -3,6 +3,8 @@ A basic variant calling pipeline
 
 perform variant calling with the provided script, you can make changes as you see fit.
 
+once it works convert it to nextflow, Good luck
+
 read data:
 
 curl -O -J -L https://osf.io/shqpv/download
