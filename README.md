@@ -4,7 +4,8 @@ A basic variant calling pipeline
 perform variant calling with the provided script, you can make changes as you see fit.
 
 read data:
-curl -O -J -L https://osf.io/shqpv/download,
+curl -O -J -L https://osf.io/shqpv/download
+
 curl -O -J -L https://osf.io/9m3ch/download
 
 The dataset you will be working with is from an Illumina MiSeq dataset. The sequenced organism is an
