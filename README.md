@@ -4,6 +4,7 @@ A basic variant calling pipeline
 perform variant calling with the provided script, you can make changes as you see fit.
 
 read data:
+
 curl -O -J -L https://osf.io/shqpv/download
 
 curl -O -J -L https://osf.io/9m3ch/download
