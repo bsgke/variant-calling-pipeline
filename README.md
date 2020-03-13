@@ -14,6 +14,7 @@ enterohaemorrhagic E. coli (EHEC) of the serotype O157, a potentially fatal gast
 paired-end 2x150bp,only a subset of the data is provided with the above links.
 
 reference data: 
+
 curl -O -J -L https://osf.io/rnzbe/download
 
 This reference contains the sequence of the pO157 plasmid from the Sakai outbreak strain of E. coli O157.
