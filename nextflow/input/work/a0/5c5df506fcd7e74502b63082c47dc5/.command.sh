@@ -1,0 +1,2 @@
+#!/bin/bash -ue
+bwa mem pO157_Sakai.fasta.gz SRR957824_500K_R1_paired_fastqc.html SRR957824_500K_R1_paired_fastqc.zip SRR957824_500K_R1_unpaired_fastqc.html SRR957824_500K_R1_unpaired_fastqc.zip SRR957824_500K_R2_paired_fastqc.html SRR957824_500K_R2_paired_fastqc.zip SRR957824_500K_R2_unpaired_fastqc.html SRR957824_500K_R2_unpaired_fastqc.zip > alignment.sam

@@ -1,0 +1,113 @@
+Mar-21 17:03:29.475 [main] DEBUG nextflow.cli.Launcher - $> nextflow variant_calling.nf -resume
+Mar-21 17:03:29.647 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 19.01.0
+Mar-21 17:03:29.660 [main] INFO  nextflow.cli.CmdRun - Launching `variant_calling.nf` [big_cori] - revision: 6403390140
+Mar-21 17:03:29.745 [main] DEBUG nextflow.Session - Session uuid: 9a0edaf1-34e9-4992-b138-33e1b976318c
+Mar-21 17:03:29.745 [main] DEBUG nextflow.Session - Run name: big_cori
+Mar-21 17:03:29.747 [main] DEBUG nextflow.Session - Executor pool size: 4
+Mar-21 17:03:29.763 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 19.01.0 build 5050
+  Modified: 22-01-2019 11:19 UTC (14:19 EAST)
+  System: Linux 4.15.0-42-generic
+  Runtime: Groovy 2.5.5 on OpenJDK 64-Bit Server VM 1.8.0_152-release-1056-b12
+  Encoding: UTF-8 (UTF-8)
+  Process: 17186@traffegy.localhost.com [127.0.0.1]
+  CPUs: 4 - Mem: 3.7 GB (496 MB) - Swap: 3.9 GB (3.4 GB)
+Mar-21 17:03:29.851 [main] DEBUG nextflow.Session - Work-dir: /home/icipe/bsgke/input/work [ext2/ext3]
+Mar-21 17:03:29.852 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/icipe/bsgke/input/bin
+Mar-21 17:03:30.179 [main] DEBUG nextflow.Session - Session start invoked
+Mar-21 17:03:30.186 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+Mar-21 17:03:30.186 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+Mar-21 17:03:30.623 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Mar-21 17:03:30.652 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: data/; pattern: *_R{1,2}.fastq.gz; options: [:]
+Mar-21 17:03:31.006 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Mar-21 17:03:31.006 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Mar-21 17:03:31.011 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Mar-21 17:03:31.013 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+Mar-21 17:03:31.017 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=3.7 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+Mar-21 17:03:31.021 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: LocalPollingMonitor
+Mar-21 17:03:31.021 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Mar-21 17:03:31.023 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
+Mar-21 17:03:31.069 [main] DEBUG nextflow.Session - >>> barrier register (process: fastqc)
+Mar-21 17:03:31.071 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > fastqc -- maxForks: 4
+Mar-21 17:03:31.096 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Mar-21 17:03:31.096 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Mar-21 17:03:31.096 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Mar-21 17:03:31.097 [main] DEBUG nextflow.Session - >>> barrier register (process: trim)
+Mar-21 17:03:31.098 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > trim -- maxForks: 4
+Mar-21 17:03:31.105 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Mar-21 17:03:31.105 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Mar-21 17:03:31.105 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Mar-21 17:03:31.107 [main] DEBUG nextflow.Session - >>> barrier register (process: clean_fastqc)
+Mar-21 17:03:31.107 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > clean_fastqc -- maxForks: 4
+Mar-21 17:03:31.111 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Mar-21 17:03:31.111 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Mar-21 17:03:31.111 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Mar-21 17:03:31.113 [main] DEBUG nextflow.Session - >>> barrier register (process: index)
+Mar-21 17:03:31.114 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > index -- maxForks: 4
+Mar-21 17:03:31.124 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Mar-21 17:03:31.124 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Mar-21 17:03:31.125 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Mar-21 17:03:31.126 [main] DEBUG nextflow.Session - >>> barrier register (process: alignment)
+Mar-21 17:03:31.127 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > alignment -- maxForks: 4
+Mar-21 17:03:31.131 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Mar-21 17:03:31.132 [main] DEBUG nextflow.Session - Session await
+Mar-21 17:03:31.256 [Actor Thread 3] INFO  nextflow.processor.TaskProcessor - [63/68f700] Cached process > fastqc (1)
+Mar-21 17:03:31.278 [Actor Thread 2] DEBUG nextflow.Session - <<< barrier arrive (process: fastqc)
+Mar-21 17:03:31.286 [Actor Thread 6] INFO  nextflow.processor.TaskProcessor - [05/5af975] Cached process > trim (1)
+Mar-21 17:03:31.290 [Actor Thread 2] DEBUG nextflow.Session - <<< barrier arrive (process: trim)
+Mar-21 17:03:31.291 [Actor Thread 3] WARN  nextflow.processor.TaskProcessor - Input tuple does not match input set cardinality declared by process `clean_fastqc` -- offending value: [/home/icipe/bsgke/input/work/05/5af97560781f3937c8997ada823fa5/SRR957824_500K_R1_paired.fq.gz, /home/icipe/bsgke/input/work/05/5af97560781f3937c8997ada823fa5/SRR957824_500K_R1_unpaired.fq.gz, /home/icipe/bsgke/input/work/05/5af97560781f3937c8997ada823fa5/SRR957824_500K_R2_paired.fq.gz, /home/icipe/bsgke/input/work/05/5af97560781f3937c8997ada823fa5/SRR957824_500K_R2_unpaired.fq.gz]
+Mar-21 17:03:31.339 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Mar-21 17:03:31.345 [Task submitter] INFO  nextflow.Session - [11/603861] Submitted process > clean_fastqc (/home/icipe/bsgke/input/work/05/5af97560781f3937c8997ada823fa5/SRR957824_500K_R1_paired.fq.gz)
+Mar-21 17:03:35.656 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: clean_fastqc (/home/icipe/bsgke/input/work/05/5af97560781f3937c8997ada823fa5/SRR957824_500K_R1_paired.fq.gz); status: COMPLETED; exit: 0; error: -; workDir: /home/icipe/bsgke/input/work/11/6038612f8fd7baacf7ae1c7673c58c]
+Mar-21 17:03:35.660 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process `clean_fastqc (/home/icipe/bsgke/input/work/05/5af97560781f3937c8997ada823fa5/SRR957824_500K_R1_paired.fq.gz)` is unable to find [UnixPath]: `/home/icipe/bsgke/input/work/11/6038612f8fd7baacf7ae1c7673c58c/input3` (pattern: `input3`)
+Mar-21 17:03:35.688 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'clean_fastqc (/home/icipe/bsgke/input/work/05/5af97560781f3937c8997ada823fa5/SRR957824_500K_R1_paired.fq.gz)'
+
+Caused by:
+  Missing output file(s) `input3` expected by process `clean_fastqc (/home/icipe/bsgke/input/work/05/5af97560781f3937c8997ada823fa5/SRR957824_500K_R1_paired.fq.gz)`
+
+Command executed:
+
+  fastqc SRR957824_500K_R1_unpaired.fq.gz
+
+Command exit status:
+  0
+
+Command output:
+  Analysis complete for SRR957824_500K_R1_unpaired.fq.gz
+
+Command error:
+  Started analysis of SRR957824_500K_R1_unpaired.fq.gz
+  Approx 5% complete for SRR957824_500K_R1_unpaired.fq.gz
+  Approx 10% complete for SRR957824_500K_R1_unpaired.fq.gz
+  Approx 15% complete for SRR957824_500K_R1_unpaired.fq.gz
+  Approx 20% complete for SRR957824_500K_R1_unpaired.fq.gz
+  Approx 25% complete for SRR957824_500K_R1_unpaired.fq.gz
+  Approx 30% complete for SRR957824_500K_R1_unpaired.fq.gz
+  Approx 35% complete for SRR957824_500K_R1_unpaired.fq.gz
+  Approx 40% complete for SRR957824_500K_R1_unpaired.fq.gz
+  Approx 45% complete for SRR957824_500K_R1_unpaired.fq.gz
+  Approx 50% complete for SRR957824_500K_R1_unpaired.fq.gz
+  Approx 55% complete for SRR957824_500K_R1_unpaired.fq.gz
+  Approx 60% complete for SRR957824_500K_R1_unpaired.fq.gz
+  Approx 65% complete for SRR957824_500K_R1_unpaired.fq.gz
+  Approx 70% complete for SRR957824_500K_R1_unpaired.fq.gz
+  Approx 75% complete for SRR957824_500K_R1_unpaired.fq.gz
+  Approx 80% complete for SRR957824_500K_R1_unpaired.fq.gz
+  Approx 85% complete for SRR957824_500K_R1_unpaired.fq.gz
+  Approx 90% complete for SRR957824_500K_R1_unpaired.fq.gz
+  Approx 95% complete for SRR957824_500K_R1_unpaired.fq.gz
+
+Work dir:
+  /home/icipe/bsgke/input/work/11/6038612f8fd7baacf7ae1c7673c58c
+
+Tip: you can replicate the issue by changing to the process work dir and entering the command `bash .command.run`
+Mar-21 17:03:35.690 [Actor Thread 2] DEBUG nextflow.Session - <<< barrier arrive (process: clean_fastqc)
+Mar-21 17:03:35.691 [Actor Thread 5] DEBUG nextflow.Session - <<< barrier arrive (process: index)
+Mar-21 17:03:35.691 [Actor Thread 2] DEBUG nextflow.Session - <<< barrier arrive (process: alignment)
+Mar-21 17:03:35.691 [main] DEBUG nextflow.Session - Session await > all process finished
+Mar-21 17:03:35.693 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Missing output file(s) `input3` expected by process `clean_fastqc (/home/icipe/bsgke/input/work/05/5af97560781f3937c8997ada823fa5/SRR957824_500K_R1_paired.fq.gz)`
+Mar-21 17:03:35.715 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Mar-21 17:03:35.715 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+Mar-21 17:03:35.726 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=0; failedCount=1; ignoredCount=0; cachedCount=2; succeedDuration=0ms; failedDuration=4.2s; cachedDuration=39.5s]
+Mar-21 17:03:35.739 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Mar-21 17:03:35.752 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

@@ -1,0 +1,103 @@
+Mar-21 16:59:28.909 [main] DEBUG nextflow.cli.Launcher - $> nextflow variant_calling.nf -resume
+Mar-21 16:59:29.058 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 19.01.0
+Mar-21 16:59:29.068 [main] INFO  nextflow.cli.CmdRun - Launching `variant_calling.nf` [nauseous_knuth] - revision: 5cfaaf5157
+Mar-21 16:59:29.166 [main] DEBUG nextflow.Session - Session uuid: 9a0edaf1-34e9-4992-b138-33e1b976318c
+Mar-21 16:59:29.166 [main] DEBUG nextflow.Session - Run name: nauseous_knuth
+Mar-21 16:59:29.168 [main] DEBUG nextflow.Session - Executor pool size: 4
+Mar-21 16:59:29.180 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 19.01.0 build 5050
+  Modified: 22-01-2019 11:19 UTC (14:19 EAST)
+  System: Linux 4.15.0-42-generic
+  Runtime: Groovy 2.5.5 on OpenJDK 64-Bit Server VM 1.8.0_152-release-1056-b12
+  Encoding: UTF-8 (UTF-8)
+  Process: 16809@traffegy.localhost.com [127.0.0.1]
+  CPUs: 4 - Mem: 3.7 GB (573.6 MB) - Swap: 3.9 GB (3.4 GB)
+Mar-21 16:59:29.264 [main] DEBUG nextflow.Session - Work-dir: /home/icipe/bsgke/input/work [ext2/ext3]
+Mar-21 16:59:29.264 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/icipe/bsgke/input/bin
+Mar-21 16:59:29.606 [main] DEBUG nextflow.Session - Session start invoked
+Mar-21 16:59:29.613 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+Mar-21 16:59:29.613 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+Mar-21 16:59:30.040 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Mar-21 16:59:30.068 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: data/; pattern: *_R{1,2}.fastq.gz; options: [:]
+Mar-21 16:59:30.405 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Mar-21 16:59:30.406 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Mar-21 16:59:30.411 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Mar-21 16:59:30.413 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+Mar-21 16:59:30.416 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=3.7 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+Mar-21 16:59:30.419 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: LocalPollingMonitor
+Mar-21 16:59:30.420 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Mar-21 16:59:30.422 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
+Mar-21 16:59:30.464 [main] DEBUG nextflow.Session - >>> barrier register (process: fastqc)
+Mar-21 16:59:30.466 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > fastqc -- maxForks: 4
+Mar-21 16:59:30.486 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Mar-21 16:59:30.486 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Mar-21 16:59:30.486 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Mar-21 16:59:30.487 [main] DEBUG nextflow.Session - >>> barrier register (process: trim)
+Mar-21 16:59:30.488 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > trim -- maxForks: 4
+Mar-21 16:59:30.499 [main] DEBUG nextflow.Session - Session aborted -- Cause: Unknown variable 'pair_id'
+Mar-21 16:59:30.520 [main] DEBUG nextflow.Session - The following nodes are still active:
+[process] fastqc
+  status=ACTIVE
+  port 0: (queue) closed; channel: -
+  port 1: (cntrl) -     ; channel: $
+
+[process] trim
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: -
+  port 1: (queue) OPEN  ; channel: clean
+  port 2: (cntrl) -     ; channel: $
+
+Mar-21 16:59:30.523 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+Mar-21 16:59:30.611 [main] ERROR nextflow.cli.Launcher - @unknown
+groovy.lang.MissingPropertyException: Unknown variable 'pair_id'
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)
+	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:77)
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:265)
+	at nextflow.processor.ProcessConfig.getProperty(ProcessConfig.groovy:268)
+	at org.codehaus.groovy.runtime.InvokerHelper.getProperty(InvokerHelper.java:190)
+	at groovy.lang.Closure.getPropertyTryThese(Closure.java:319)
+	at groovy.lang.Closure.getPropertyDelegateFirst(Closure.java:309)
+	at groovy.lang.Closure.getProperty(Closure.java:294)
+	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:309)
+	at _nf_script_7f27a4d8$_run_closure4.doCall(_nf_script_7f27a4d8:48)
+	at _nf_script_7f27a4d8$_run_closure4.doCall(_nf_script_7f27a4d8)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:104)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:326)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:264)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1041)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:41)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaClassSite.call(PogoMetaClassSite.java:56)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:119)
+	at nextflow.processor.ProcessFactory.createProcessor(ProcessFactory.groovy:218)
+	at nextflow.processor.ProcessFactory.createProcessor(ProcessFactory.groovy)
+	at nextflow.processor.ProcessFactory$createProcessor.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at nextflow.processor.ProcessFactory$createProcessor.call(Unknown Source)
+	at nextflow.script.BaseScript.process(BaseScript.groovy:146)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:190)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:58)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:156)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:176)
+	at _nf_script_7f27a4d8.run(_nf_script_7f27a4d8:44)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:382)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:170)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:240)
+	at nextflow.cli.Launcher.run(Launcher.groovy:445)
+	at nextflow.cli.Launcher.main(Launcher.groovy:622)

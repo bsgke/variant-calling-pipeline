@@ -1,0 +1,98 @@
+Mar-21 17:00:37.341 [main] DEBUG nextflow.cli.Launcher - $> nextflow variant_calling.nf -resume
+Mar-21 17:00:37.510 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 19.01.0
+Mar-21 17:00:37.521 [main] INFO  nextflow.cli.CmdRun - Launching `variant_calling.nf` [berserk_varahamihira] - revision: 554276d790
+Mar-21 17:00:37.598 [main] DEBUG nextflow.Session - Session uuid: 9a0edaf1-34e9-4992-b138-33e1b976318c
+Mar-21 17:00:37.599 [main] DEBUG nextflow.Session - Run name: berserk_varahamihira
+Mar-21 17:00:37.600 [main] DEBUG nextflow.Session - Executor pool size: 4
+Mar-21 17:00:37.614 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 19.01.0 build 5050
+  Modified: 22-01-2019 11:19 UTC (14:19 EAST)
+  System: Linux 4.15.0-42-generic
+  Runtime: Groovy 2.5.5 on OpenJDK 64-Bit Server VM 1.8.0_152-release-1056-b12
+  Encoding: UTF-8 (UTF-8)
+  Process: 16967@traffegy.localhost.com [127.0.0.1]
+  CPUs: 4 - Mem: 3.7 GB (530.4 MB) - Swap: 3.9 GB (3.4 GB)
+Mar-21 17:00:37.716 [main] DEBUG nextflow.Session - Work-dir: /home/icipe/bsgke/input/work [ext2/ext3]
+Mar-21 17:00:37.716 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/icipe/bsgke/input/bin
+Mar-21 17:00:38.055 [main] DEBUG nextflow.Session - Session start invoked
+Mar-21 17:00:38.062 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+Mar-21 17:00:38.063 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+Mar-21 17:00:38.497 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Mar-21 17:00:38.531 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: data/; pattern: *_R{1,2}.fastq.gz; options: [:]
+Mar-21 17:00:38.870 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Mar-21 17:00:38.871 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Mar-21 17:00:38.877 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Mar-21 17:00:38.879 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+Mar-21 17:00:38.883 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=3.7 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+Mar-21 17:00:38.886 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: LocalPollingMonitor
+Mar-21 17:00:38.887 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Mar-21 17:00:38.889 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
+Mar-21 17:00:38.934 [main] DEBUG nextflow.Session - >>> barrier register (process: fastqc)
+Mar-21 17:00:38.936 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > fastqc -- maxForks: 4
+Mar-21 17:00:38.959 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Mar-21 17:00:38.959 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Mar-21 17:00:38.959 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Mar-21 17:00:38.960 [main] DEBUG nextflow.Session - >>> barrier register (process: trim)
+Mar-21 17:00:38.960 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > trim -- maxForks: 4
+Mar-21 17:00:38.968 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Mar-21 17:00:38.968 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Mar-21 17:00:38.968 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Mar-21 17:00:38.969 [main] DEBUG nextflow.Session - >>> barrier register (process: clean_fastqc)
+Mar-21 17:00:38.969 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > clean_fastqc -- maxForks: 4
+Mar-21 17:00:38.974 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Mar-21 17:00:38.974 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Mar-21 17:00:38.974 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Mar-21 17:00:38.976 [main] DEBUG nextflow.Session - >>> barrier register (process: index)
+Mar-21 17:00:38.977 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > index -- maxForks: 4
+Mar-21 17:00:38.986 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Mar-21 17:00:38.986 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Mar-21 17:00:38.986 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Mar-21 17:00:38.988 [main] DEBUG nextflow.Session - >>> barrier register (process: alignment)
+Mar-21 17:00:38.988 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > alignment -- maxForks: 4
+Mar-21 17:00:38.995 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Mar-21 17:00:38.995 [main] DEBUG nextflow.Session - Session await
+Mar-21 17:00:39.126 [Actor Thread 3] INFO  nextflow.processor.TaskProcessor - [63/68f700] Cached process > fastqc (1)
+Mar-21 17:00:39.147 [Actor Thread 2] DEBUG nextflow.Session - <<< barrier arrive (process: fastqc)
+Mar-21 17:00:39.152 [Actor Thread 4] INFO  nextflow.processor.TaskProcessor - [05/5af975] Cached process > trim (1)
+Mar-21 17:00:39.158 [Actor Thread 3] WARN  nextflow.processor.TaskProcessor - Input tuple does not match input set cardinality declared by process `clean_fastqc` -- offending value: [/home/icipe/bsgke/input/work/05/5af97560781f3937c8997ada823fa5/SRR957824_500K_R1_paired.fq.gz, /home/icipe/bsgke/input/work/05/5af97560781f3937c8997ada823fa5/SRR957824_500K_R1_unpaired.fq.gz, /home/icipe/bsgke/input/work/05/5af97560781f3937c8997ada823fa5/SRR957824_500K_R2_paired.fq.gz, /home/icipe/bsgke/input/work/05/5af97560781f3937c8997ada823fa5/SRR957824_500K_R2_unpaired.fq.gz]
+Mar-21 17:00:39.160 [Actor Thread 2] DEBUG nextflow.Session - <<< barrier arrive (process: trim)
+Mar-21 17:00:39.241 [Task submitter] DEBUG nextflow.processor.TaskRun - Unable to dump error of process 'clean_fastqc (/home/icipe/bsgke/input/work/05/5af97560781f3937c8997ada823fa5/SRR957824_500K_R1_paired.fq.gz)' -- Cause: java.nio.file.NoSuchFileException: /home/icipe/bsgke/input/work/3f/19269a0a4165a5cd2d8ea15b61a8de/.command.log
+Mar-21 17:00:39.242 [Task submitter] ERROR nextflow.processor.TaskProcessor - Error executing process > 'clean_fastqc (/home/icipe/bsgke/input/work/05/5af97560781f3937c8997ada823fa5/SRR957824_500K_R1_paired.fq.gz)'
+
+Caused by:
+  File `/home/icipe/bsgke/input/work/05/5af97560781f3937c8997ada823fa5/SRR957824_500K_R1_paired.fq.gz*paired.fq.gz` is out of the scope of process working dir: /home/icipe/bsgke/input/work/3f/19269a0a4165a5cd2d8ea15b61a8de
+
+Command executed:
+
+  fastqc SRR957824_500K_R1_unpaired.fq.gz
+
+Command exit status:
+  -
+
+Command output:
+  (empty)
+
+Work dir:
+  /home/icipe/bsgke/input/work/3f/19269a0a4165a5cd2d8ea15b61a8de
+
+Tip: when you have fixed the problem you can continue the execution appending to the nextflow command line the option `-resume`
+Mar-21 17:00:39.244 [Task submitter] DEBUG nextflow.Session - Session aborted -- Cause: File `/home/icipe/bsgke/input/work/05/5af97560781f3937c8997ada823fa5/SRR957824_500K_R1_paired.fq.gz*paired.fq.gz` is out of the scope of process working dir: /home/icipe/bsgke/input/work/3f/19269a0a4165a5cd2d8ea15b61a8de
+Mar-21 17:00:39.267 [Task submitter] DEBUG nextflow.Session - The following nodes are still active:
+[process] index
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: ref
+  port 1: (queue) OPEN  ; channel: clean2
+  port 2: (cntrl) -     ; channel: $
+
+[process] alignment
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: reference
+  port 1: (queue) OPEN  ; channel: read_paired
+  port 2: (cntrl) -     ; channel: $
+
+Mar-21 17:00:39.270 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+Mar-21 17:00:39.277 [main] DEBUG nextflow.Session - Session await > all process finished
+Mar-21 17:00:39.278 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Mar-21 17:00:39.289 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=0; failedCount=1; ignoredCount=0; cachedCount=2; succeedDuration=0ms; failedDuration=0ms; cachedDuration=39.5s]
+Mar-21 17:00:39.301 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Mar-21 17:00:39.314 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

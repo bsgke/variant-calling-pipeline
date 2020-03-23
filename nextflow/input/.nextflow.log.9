@@ -1,0 +1,91 @@
+Mar-21 16:52:51.110 [main] DEBUG nextflow.cli.Launcher - $> nextflow variant_calling.nf -resume
+Mar-21 16:52:51.274 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 19.01.0
+Mar-21 16:52:51.285 [main] INFO  nextflow.cli.CmdRun - Launching `variant_calling.nf` [gigantic_mclean] - revision: fe6a14feb6
+Mar-21 16:52:51.362 [main] DEBUG nextflow.Session - Session uuid: 9a0edaf1-34e9-4992-b138-33e1b976318c
+Mar-21 16:52:51.362 [main] DEBUG nextflow.Session - Run name: gigantic_mclean
+Mar-21 16:52:51.364 [main] DEBUG nextflow.Session - Executor pool size: 4
+Mar-21 16:52:51.377 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 19.01.0 build 5050
+  Modified: 22-01-2019 11:19 UTC (14:19 EAST)
+  System: Linux 4.15.0-42-generic
+  Runtime: Groovy 2.5.5 on OpenJDK 64-Bit Server VM 1.8.0_152-release-1056-b12
+  Encoding: UTF-8 (UTF-8)
+  Process: 16406@traffegy.localhost.com [127.0.0.1]
+  CPUs: 4 - Mem: 3.7 GB (268.1 MB) - Swap: 3.9 GB (3.5 GB)
+Mar-21 16:52:51.483 [main] DEBUG nextflow.Session - Work-dir: /home/icipe/bsgke/input/work [ext2/ext3]
+Mar-21 16:52:51.484 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/icipe/bsgke/input/bin
+Mar-21 16:52:51.830 [main] DEBUG nextflow.Session - Session start invoked
+Mar-21 16:52:51.837 [main] DEBUG nextflow.processor.TaskDispatcher - Dispatcher > start
+Mar-21 16:52:51.838 [main] DEBUG nextflow.script.ScriptRunner - > Script parsing
+Mar-21 16:52:52.275 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Mar-21 16:52:52.302 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: data/; pattern: *_R{1,2}.fastq.gz; options: [:]
+Mar-21 16:52:52.661 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Mar-21 16:52:52.661 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Mar-21 16:52:52.668 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Mar-21 16:52:52.670 [main] INFO  nextflow.executor.Executor - [warm up] executor > local
+Mar-21 16:52:52.674 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=4; memory=3.7 GB; capacity=4; pollInterval=100ms; dumpInterval=5m
+Mar-21 16:52:52.678 [main] DEBUG nextflow.processor.TaskDispatcher - Starting monitor: LocalPollingMonitor
+Mar-21 16:52:52.679 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Mar-21 16:52:52.681 [main] DEBUG nextflow.executor.Executor - Invoke register for executor: local
+Mar-21 16:52:52.728 [main] DEBUG nextflow.Session - >>> barrier register (process: fastqc)
+Mar-21 16:52:52.730 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > fastqc -- maxForks: 4
+Mar-21 16:52:52.752 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Mar-21 16:52:52.752 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Mar-21 16:52:52.752 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Mar-21 16:52:52.753 [main] DEBUG nextflow.Session - >>> barrier register (process: trim)
+Mar-21 16:52:52.754 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > trim -- maxForks: 4
+Mar-21 16:52:52.764 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Mar-21 16:52:52.764 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Mar-21 16:52:52.764 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Mar-21 16:52:52.765 [main] DEBUG nextflow.Session - >>> barrier register (process: clean_fastqc)
+Mar-21 16:52:52.765 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > clean_fastqc -- maxForks: 4
+Mar-21 16:52:52.768 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Mar-21 16:52:52.769 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Mar-21 16:52:52.769 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Mar-21 16:52:52.771 [main] DEBUG nextflow.Session - >>> barrier register (process: index)
+Mar-21 16:52:52.771 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > index -- maxForks: 4
+Mar-21 16:52:52.780 [main] DEBUG nextflow.processor.ProcessFactory - << taskConfig executor: null
+Mar-21 16:52:52.780 [main] DEBUG nextflow.processor.ProcessFactory - >> processorType: 'local'
+Mar-21 16:52:52.780 [main] DEBUG nextflow.executor.Executor - Initializing executor: local
+Mar-21 16:52:52.781 [main] DEBUG nextflow.Session - >>> barrier register (process: alignment)
+Mar-21 16:52:52.781 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > alignment -- maxForks: 4
+Mar-21 16:52:52.786 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Mar-21 16:52:52.786 [main] DEBUG nextflow.Session - Session await
+Mar-21 16:52:52.920 [Actor Thread 3] INFO  nextflow.processor.TaskProcessor - [63/68f700] Cached process > fastqc (1)
+Mar-21 16:52:52.942 [Actor Thread 2] DEBUG nextflow.Session - <<< barrier arrive (process: fastqc)
+Mar-21 16:52:52.950 [Actor Thread 6] INFO  nextflow.processor.TaskProcessor - [05/5af975] Cached process > trim (1)
+Mar-21 16:52:52.953 [Actor Thread 2] DEBUG nextflow.Session - <<< barrier arrive (process: trim)
+Mar-21 16:52:52.958 [Actor Thread 3] DEBUG nextflow.processor.TaskProcessor - Process clean_fastqc > collision check staing file names: [SRR957824_500K_R1_unpaired.fq.gz:2, SRR957824_500K_R1_paired.fq.gz:1, SRR957824_500K_R2_paired.fq.gz:1, SRR957824_500K_R2_unpaired.fq.gz:2]
+Mar-21 16:52:52.967 [Actor Thread 3] ERROR nextflow.processor.TaskProcessor - Error executing process > 'clean_fastqc (null)'
+
+Caused by:
+  Process `clean_fastqc` input file name collision -- There are multiple input files for each of the following file names: SRR957824_500K_R1_unpaired.fq.gz, SRR957824_500K_R2_unpaired.fq.gz
+
+
+Tip: you can replicate the issue by changing to the process work dir and entering the command `bash .command.run`
+Mar-21 16:52:52.969 [Actor Thread 3] DEBUG nextflow.Session - Session aborted -- Cause: Process `clean_fastqc` input file name collision -- There are multiple input files for each of the following file names: SRR957824_500K_R1_unpaired.fq.gz, SRR957824_500K_R2_unpaired.fq.gz
+Mar-21 16:52:52.985 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local)
+Mar-21 16:52:52.993 [Actor Thread 3] DEBUG nextflow.Session - The following nodes are still active:
+[process] clean_fastqc
+  status=ACTIVE
+  port 0: (queue) closed; channel: input3
+  port 1: (queue) OPEN  ; channel: input4
+  port 2: (cntrl) -     ; channel: $
+
+[process] index
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: ref
+  port 1: (queue) OPEN  ; channel: clean2
+  port 2: (cntrl) -     ; channel: $
+
+[process] alignment
+  status=ACTIVE
+  port 0: (queue) OPEN  ; channel: reference
+  port 1: (queue) OPEN  ; channel: read_paired
+  port 2: (cntrl) -     ; channel: $
+
+Mar-21 16:52:52.997 [main] DEBUG nextflow.Session - Session await > all process finished
+Mar-21 16:52:52.997 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Mar-21 16:52:53.005 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=0; failedCount=0; ignoredCount=0; cachedCount=2; succeedDuration=0ms; failedDuration=0ms; cachedDuration=39.5s]
+Mar-21 16:52:53.013 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Mar-21 16:52:53.029 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
